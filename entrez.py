@@ -11,8 +11,9 @@ api_url = f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=gene&
 def get_bio_data(search, user_email):
 	'''
 
-	:param search:
-	:return:bio_dict:
+	This function uses the biopython API to search for specific requested papers. The search parameter determines what
+	topic the user wants, and user_email provides a valid email address for using the database. This function also
+	converts the collected papers into a dictionary.
 	'''
 	Entrez.email=user_email
 	stream=Entrez.esearch(db="pubmed",term=f"{search}[title]",retmax="5")
