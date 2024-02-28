@@ -8,7 +8,7 @@ class UserCollection():
 
     def add_response(self, title, authors, source, abstract):
         '''
-        DESC
+        This function adds the papers in dictionary format to the UserPapers mongoDB collection.
         '''
         try:
             new_user = {
