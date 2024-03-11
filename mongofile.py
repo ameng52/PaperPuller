@@ -3,7 +3,6 @@ from loguru import logger
 import entrez
 from pymongo import MongoClient
 import add_seq
-import main
 
 logger.remove()
 logger.add("log_file_{time:YYYY_MMM_DD}.log")
